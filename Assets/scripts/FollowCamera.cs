@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowCamera : MonoBehaviour
+namespace RPG.Core
 {
-
-    [SerializeField] Transform targer;
-
-    void LateUpdate()
+    public class FollowCamera : MonoBehaviour
     {
-        transform.position = targer.position;
+
+        [SerializeField] Transform targer;
+
+        void LateUpdate()
+        {
+            transform.position = targer.position;
+        }
     }
+
 }
