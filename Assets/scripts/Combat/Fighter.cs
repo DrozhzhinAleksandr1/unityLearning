@@ -8,6 +8,7 @@ namespace RPG.Combat
     {
         [SerializeField] float weaponRange = 4f;
         [SerializeField] float timeBeetwenAnnacks = 1f;
+        [SerializeField] float weaponDamage = 5f;
         Transform target;
 
         float timeScinceLastAttack = 0;
@@ -34,12 +35,21 @@ namespace RPG.Combat
             }
         }
 
+        // Animation event
+        void Hit()
+        {
+            Health healthComponent = target.GetComponent<Health>();
+            healthComponent.TakeDamage(weaponDamage);
+
+        }
+
         private void AttackBehaviour()
         {
             if (timeBeetwenAnnacks < timeScinceLastAttack)
             {
                 GetComponent<Animator>().SetTrigger("attack");
                 timeScinceLastAttack = 0;
+                // this will triger the hit event void Hit()
             }
         }
 
@@ -55,11 +65,6 @@ namespace RPG.Combat
             target = null;
         }
 
-        // Animation event
-        void Hit()
-        {
-
-        }
     }
 
 }
