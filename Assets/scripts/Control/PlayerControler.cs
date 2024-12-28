@@ -28,10 +28,12 @@ namespace RPG.Control
                 // }
 
                 CombatTarget target = item.transform.GetComponent<CombatTarget>();
-                if (target == null)
+
+                if (!GetComponent<Fighter>().CanAttack(target)) // if (target == null)
                 {
                     continue;
                 }
+
                 if (Input.GetMouseButtonDown(0))
                 {
                     GetComponent<Fighter>().Atack(target);
