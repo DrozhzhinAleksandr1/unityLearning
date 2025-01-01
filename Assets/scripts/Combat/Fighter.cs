@@ -6,7 +6,7 @@ namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour, IAction
     {
-        [SerializeField] float weaponRange = 4f;
+        [SerializeField] float weaponRange = 2.5f;
         [SerializeField] float timeBeetwenAnnacks = 1f;
         [SerializeField] float weaponDamage = 5f;
         Health target;
@@ -61,14 +61,14 @@ namespace RPG.Combat
             GetComponent<Animator>().SetTrigger("attack");
         }
 
-        public bool CanAttack(CombatTarget combatTarget)
+        public bool CanAttack(GameObject combatTarget)
         {
             if (combatTarget == null) return false;
             Health targetToTest = combatTarget.GetComponent<Health>();
             return targetToTest != null && !targetToTest.IsDead();
         }
 
-        public void Atack(CombatTarget combatTarget)
+        public void Atack(GameObject combatTarget)
         {
             GetComponent<ActionScheduler>().StartAction(this);
             // print("Bang bang");
