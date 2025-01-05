@@ -10,10 +10,13 @@ namespace RPG.Movement
     {
         [SerializeField] Transform targer;
 
+
+        Health health;
         NavMeshAgent navMeshAgent;
 
         private void Start()
         {
+            health = GetComponent<Health>();
             navMeshAgent = GetComponent<NavMeshAgent>();
             // Debug.Log("Start is called once when the script is initialized.");
         }
@@ -23,6 +26,8 @@ namespace RPG.Movement
         // Update is called once per frame
         void Update()
         {
+
+            navMeshAgent.enabled = !health.IsDead();
             // // // // // first part learning
             // if (Input.GetMouseButtonDown(0))
             // {
