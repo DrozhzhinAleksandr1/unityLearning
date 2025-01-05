@@ -15,7 +15,10 @@ namespace RPG.Control
         GameObject player;
 
         Vector3 guardPosition;
+
+        float timeSinceLastSawPlayer = Mathf.Infinity;
         [SerializeField] float chaseDistance = 8f;
+        [SerializeField] float suspicionTime = 5f;
         // Start is called before the first frame update
         void Start()
         {
@@ -33,13 +36,34 @@ namespace RPG.Control
 
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
-                fighter.Atack(player);
+                timeSinceLastSawPlayer = 0;
+                AttackBehavior();
+            }
+            else if (timeSinceLastSawPlayer < suspicionTime)
+            {
+                SuspicionBehavior();
             }
             else
             {
-                // fighter.Cancel();
-                mover.StartMoveAction(guardPosition);
+                GuardBehavior();
             }
+
+            timeSinceLastSawPlayer += Time.deltaTime;
+        }
+
+        private void GuardBehavior()
+        {
+            mover.StartMoveAction(guardPosition);
+        }
+
+        private void SuspicionBehavior()
+        {
+            GetComponent<ActionScheduler>().CancelCurrentAction();
+        }
+
+        private void AttackBehavior()
+        {
+            fighter.Atack(player);
         }
 
         private bool InAttackRangeOfPlayer()
