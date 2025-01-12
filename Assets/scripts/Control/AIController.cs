@@ -19,10 +19,12 @@ namespace RPG.Control
         int currentWaypointindex = 0;
 
         float timeSinceLastSawPlayer = Mathf.Infinity;
+        float timeSinceArrivedAtWaypoint = Mathf.Infinity;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float chaseDistance = 8f;
         [SerializeField] float suspicionTime = 5f;
+        [SerializeField] float waypointDwellTime = 3f;
         // Start is called before the first frame update
         void Start()
         {
@@ -40,7 +42,6 @@ namespace RPG.Control
 
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
-                timeSinceLastSawPlayer = 0;
                 AttackBehavior();
             }
             else if (timeSinceLastSawPlayer < suspicionTime)
@@ -52,7 +53,13 @@ namespace RPG.Control
                 PatrolBehavior();
             }
 
+            UpdateTimers();
+        }
+
+        private void UpdateTimers()
+        {
             timeSinceLastSawPlayer += Time.deltaTime;
+            timeSinceArrivedAtWaypoint += Time.deltaTime;
         }
 
         private void PatrolBehavior()
@@ -62,12 +69,22 @@ namespace RPG.Control
             {
                 if (AtWaypoint())
                 {
+                    timeSinceArrivedAtWaypoint = 0;
                     CycleWaypoint();
+                    // как только он оказываеться сдесь то он уже 
+                    // текущий вейпоинт не считает текущим и поэтому не срабатывает много раз
+                    // потому что CycleWaypoint сразу же меняеться на некст
                 }
                 nextPosition = GetCurrentWaypoint();
+                // print($"{gameObject.name} next:{nextPosition}");
             }
 
-            mover.StartMoveAction(nextPosition);
+            if (timeSinceArrivedAtWaypoint > waypointDwellTime)
+            {
+                // тут пока не пройдет время ожидания на точке дальше не пойдет
+                mover.StartMoveAction(nextPosition);
+            }
+
         }
 
         private Vector3 GetCurrentWaypoint()
@@ -93,6 +110,8 @@ namespace RPG.Control
 
         private void AttackBehavior()
         {
+
+            timeSinceLastSawPlayer = 0;
             fighter.Atack(player);
         }
 
