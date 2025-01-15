@@ -25,6 +25,8 @@ namespace RPG.Control
         [SerializeField] float chaseDistance = 8f;
         [SerializeField] float suspicionTime = 5f;
         [SerializeField] float waypointDwellTime = 3f;
+        [Range(0, 1)]
+        [SerializeField] float patrolSpeedFraction = 0.2f;
         // Start is called before the first frame update
         void Start()
         {
@@ -82,7 +84,7 @@ namespace RPG.Control
             if (timeSinceArrivedAtWaypoint > waypointDwellTime)
             {
                 // тут пока не пройдет время ожидания на точке дальше не пойдет
-                mover.StartMoveAction(nextPosition);
+                mover.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
 
         }
