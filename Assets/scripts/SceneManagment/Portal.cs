@@ -12,7 +12,16 @@ namespace RPG.SceneManagment
         {
             // print("Portal triggered");
             if (other.tag != "Player") return;
-            SceneManager.LoadScene(sceneToLoad);
+            StartCoroutine(Transition());
+        }
+
+        private IEnumerator Transition()
+        {
+            DontDestroyOnLoad(gameObject);
+
+            yield return SceneManager.LoadSceneAsync(sceneToLoad);
+            print("Scene loaded");
+            Destroy(gameObject);
         }
     }
 
