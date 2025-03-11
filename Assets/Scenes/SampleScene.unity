@@ -711,6 +711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3867803316629824415, guid: 787c85ab8773a426090e4666be89b5c1, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 8ce25808-1138-408a-8849-0b5ec45e7bec
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1168,6 +1172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3867803316629824415, guid: 787c85ab8773a426090e4666be89b5c1, type: 3}
+      propertyPath: uniqueIdentifier
+      value: e749338e-e5d9-48ef-a2cd-73a5688e756b
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1321,6 +1329,10 @@ PrefabInstance:
     - target: {fileID: 3735587513391205523, guid: 05fa89c5322a94c3a8b78a53bb02eb1c, type: 3}
       propertyPath: m_Name
       value: Tought Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867803316629824415, guid: 05fa89c5322a94c3a8b78a53bb02eb1c, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 23924111-2dde-4ffa-b0cb-2cabc98433fc
       objectReference: {fileID: 0}
     - target: {fileID: 4017852435075104465, guid: 05fa89c5322a94c3a8b78a53bb02eb1c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2665,6 +2677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3867803316629824415, guid: 787c85ab8773a426090e4666be89b5c1, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 3feca991-982c-4fb7-92c4-136c687b285a
+      objectReference: {fileID: 0}
     - target: {fileID: 5436284972132958438, guid: 787c85ab8773a426090e4666be89b5c1, type: 3}
       propertyPath: patrolPath
       value: 
@@ -3173,6 +3189,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3095207553984759045, guid: 91817acfdc85040e987f75c76231c465, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 2ca16214-a113-4a8f-b37f-a291ed291469
+      objectReference: {fileID: 0}
     - target: {fileID: 4739223187764004496, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.285946
