@@ -342,7 +342,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3095207553984759045, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: uniqueIdentifier
-      value: 6e4b31ad-ccb9-469d-9eea-41286cb962c1
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3453222810275993265, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_LocalPosition.x
