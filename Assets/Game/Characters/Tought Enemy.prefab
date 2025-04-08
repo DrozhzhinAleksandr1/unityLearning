@@ -66,6 +66,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 417656, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
   m_PrefabInstance: {fileID: 4017852435069705613}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &4017852435069594243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+  m_PrefabInstance: {fileID: 4017852435069705613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8975481450545408955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,6 +83,18 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1944692827291127927, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 9358855ac3e82427f9ba06bde2dadec1, type: 2}
+    - target: {fileID: 1944692827291127927, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: bae068a2db71d40ab81b4fd15e9bfd8a, type: 2}
+    - target: {fileID: 1944692827291127927, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 4017852435069594243}
     - target: {fileID: 2352030992470413861, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -140,7 +157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5717365760688170792, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Tought Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6350360098209596724, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
       propertyPath: m_Enabled
@@ -200,4 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671c64ad837424b74a8feaafa4530cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
   chaseDistance: 8
+  suspicionTime: 5
+  waypointDwellTime: 3
+  patrolSpeedFraction: 0.2
