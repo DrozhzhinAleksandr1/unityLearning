@@ -49,7 +49,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6533011903789866893}
     - target: {fileID: 2465388442535595020, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
+      propertyPath: m_Height
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465388442535595020, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465388442535595020, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
+      propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5492789875156016016, guid: 66c1f3b030b254d62b98e65920dc5197, type: 3}
