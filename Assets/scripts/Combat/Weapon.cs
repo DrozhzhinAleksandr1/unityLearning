@@ -1,7 +1,6 @@
 using RPG.Core;
 using UnityEngine;
 
-
 namespace RPG.Combat
 {
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make New Weapon", order = 0)]
@@ -51,7 +50,7 @@ namespace RPG.Combat
         {
             Transform handTransform = GetHandTranform(rightHand, leftHand);
             Projectile projectileInstance = Instantiate(projectile, handTransform.position, Quaternion.identity);
-            projectileInstance.SetTarget(target);
+            projectileInstance.SetTarget(target, weaponDamage);
         }
 
         public float getWeaponRange()
