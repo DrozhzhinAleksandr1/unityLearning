@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProjectilesArrow Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 1341301168636291973, guid: 3cacdad4936c54fe3b0c9b46a3987f46, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3493633505274571070, guid: 3cacdad4936c54fe3b0c9b46a3987f46, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
       value: 1
