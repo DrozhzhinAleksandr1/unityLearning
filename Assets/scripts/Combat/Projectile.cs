@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using RPG.Attributes;
 using RPG.Core;
 using UnityEngine;
 

@@ -3,6 +3,7 @@ using RPG.Movement;
 using RPG.Combat;
 using UnityEngine;
 using RPG.Core;
+using RPG.Attributes;
 
 namespace RPG.Control
 {
