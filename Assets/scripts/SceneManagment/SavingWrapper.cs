@@ -31,17 +31,29 @@ namespace RPG.SceneManagment
             {
                 Save();
             }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                Delete();
+            }
         }
 
         public void Load()
         {
             //call to saving sistem
             GetComponent<SavingSystem>().Load(dfaultSaveFile);
+            print("Loaded");
         }
         public void Save()
         {
             GetComponent<SavingSystem>().Save(dfaultSaveFile);
+            print("Saved");
+        }
 
+        public void Delete()
+        {
+            GetComponent<SavingSystem>().Delete(dfaultSaveFile);
+            print("Deleted");
         }
 
     }
