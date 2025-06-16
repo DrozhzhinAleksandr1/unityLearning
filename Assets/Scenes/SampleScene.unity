@@ -3704,6 +3704,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7006101322061818884, guid: 91817acfdc85040e987f75c76231c465, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -32.30005
+      objectReference: {fileID: 0}
     - target: {fileID: 7444922026474546576, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_Name
       value: Core
@@ -3718,27 +3722,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8460729433634132119, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.39955
+      value: -37.30328
       objectReference: {fileID: 0}
     - target: {fileID: 8460729433634132119, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.25532
+      value: -11.276426
       objectReference: {fileID: 0}
     - target: {fileID: 8460729433634132119, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 108.76428
+      value: 108.77202
       objectReference: {fileID: 0}
     - target: {fileID: 8695195459332425319, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.39955
+      value: -37.30328
       objectReference: {fileID: 0}
     - target: {fileID: 8695195459332425319, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.25532
+      value: -11.276426
       objectReference: {fileID: 0}
     - target: {fileID: 8695195459332425319, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 108.76428
+      value: 108.77202
       objectReference: {fileID: 0}
     - target: {fileID: 8731053890629246294, guid: 91817acfdc85040e987f75c76231c465, type: 3}
       propertyPath: defaultWeapon
