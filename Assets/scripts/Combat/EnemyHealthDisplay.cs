@@ -25,7 +25,8 @@ namespace RPG.Combat
             }
             else
             {
-                text.text = String.Format("{0:0}%", targetHealth.GetPercantage());
+                // text.text = String.Format("{0:0}%", targetHealth.GetPercantage());
+                text.text = String.Format("{0:0}/{1:0}", targetHealth.GetHealthPoints(), targetHealth.GetMaxHealthPoints());
             }
         }
 
