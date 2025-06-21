@@ -19,9 +19,15 @@ namespace RPG.SceneManagment
         IEnumerator LoadLastScene()
         {
             Fader fader = FindObjectOfType<Fader>();
-            fader.FadeOutImmediate();
+            if (fader != null)
+            {
+                fader.FadeOutImmediate();
+            }
             yield return GetComponent<SavingSystem>().LoadLastScene(dfaultSaveFile);
-            yield return fader.FadeIn(fadeInTime);
+            if (fader != null)
+            {
+                yield return fader.FadeIn(fadeInTime);
+            }
         }
 
         // Update is called once per frame
