@@ -10,6 +10,7 @@ namespace RPG.Combat
         [SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] float weaponRange = 2.5f;
         [SerializeField] float weaponDamage = 5f;
+        [SerializeField] float percentageBonus = 0;
         [SerializeField] bool isRightHanded = true;
         [SerializeField] Projectile projectile = null;
 
@@ -82,6 +83,11 @@ namespace RPG.Combat
         public float getWeaponRange()
         {
             return weaponRange;
+        }
+
+        public float GetPercantageBonus()
+        {
+            return percentageBonus;
         }
 
         public float getWeaponDamage()

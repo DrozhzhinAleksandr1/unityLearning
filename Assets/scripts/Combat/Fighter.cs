@@ -133,11 +133,19 @@ namespace RPG.Combat
             GetComponent<Animator>().SetTrigger("stopAttack");
         }
 
-        public IEnumerable<float> GetAdditiveModifier(Stat stat)
+        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
         {
             if (stat == Stat.Damage)
             {
                 yield return currentWeapon.getWeaponDamage();
+            }
+        }
+
+        public IEnumerable<float> GetPercantageModifiers(Stat stat)
+        {
+            if (stat == Stat.Damage)
+            {
+                yield return currentWeapon.GetPercantageBonus();
             }
         }
 
@@ -152,7 +160,6 @@ namespace RPG.Combat
             Weapon weapon = Resources.Load<Weapon>(weaponName);
             EquipWeapon(weapon);
         }
-
     }
 
 }
