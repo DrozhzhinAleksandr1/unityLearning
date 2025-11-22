@@ -29,13 +29,17 @@ namespace RPG.Control
         [Range(0, 1)]
         [SerializeField] float patrolSpeedFraction = 0.2f;
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
-            guardPosition = transform.position;
             fighter = GetComponent<Fighter>();
             mover = GetComponent<Mover>();
             health = GetComponent<Health>();
             player = GameObject.FindWithTag("Player");
+        }
+
+        void Start()
+        {
+            guardPosition = transform.position;
         }
 
         // // Update is called once per frame
